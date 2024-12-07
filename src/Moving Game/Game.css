@@ -1,0 +1,22 @@
+
+.box{
+    width: 155px;
+    height: 155px;
+    background-color: black;
+}
+.btn{
+    padding: 26px 26px;
+    width: 95px;
+    height: 95px;
+    border: none;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #4caf4fac;
+}
+.btn:hover{
+    box-shadow: 6px 6px 18px 1px #d7c6c65f;
+    background-color: rgba(151, 243, 255, 0.916);
+    font-size: 18px;
+}
