@@ -10,6 +10,9 @@ import { BackGroundChange } from "./BackGroundChange/BackGroundChange.jsx";
 import LandingPage from "./LandingPage/LandingPage.jsx";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Signup from "./LandingPage/signUp.jsx";
+import Career from "./LandingPage/Career.jsx";
+import About from "./LandingPage/About.jsx";
+import Product from "./components/Product.jsx";
 const App = () => {
 
    const NavStyle = {
@@ -17,13 +20,17 @@ const App = () => {
    }
    return (
       <BrowserRouter>
-        <div className="Nav">
-        </div>
+         <div className="Nav">
+         </div>
          <Routes>
-            <Route path="/background" element={<BackGroundChange />} ></Route>
-            <Route path="/" element={<LandingPage />} ></Route>
-            <Route path="/Game" element={<Game />} ></Route>
-            <Route path="/sign" element={<Signup />} ></Route>
+            <Route path="background" element={<BackGroundChange />} >
+               <Route path="career" element={<Career />} />
+               <Route path="about" element={<About />} />
+            </Route>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/Game" element={<Game />}/>
+            <Route path="/sign" element={<Signup />} />
+            <Route path="/product/:id" element={<Product/>} />
          </Routes>
       </BrowserRouter>
 

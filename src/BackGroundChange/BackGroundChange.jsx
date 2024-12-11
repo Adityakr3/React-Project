@@ -1,5 +1,6 @@
 import React, { useReducer, useState } from "react";
 import { mychangeColor } from "./BackGroundChange";
+import { Link, Outlet } from "react-router-dom";
 export const BackGroundChange = () => {
     const [input, setInput] = useState("");
     const [color, dispatch] = useReducer(mychangeColor, "blue");
@@ -10,11 +11,20 @@ export const BackGroundChange = () => {
         border: "none",
         fontSize: "16px",
         fontWeight: "bold",
-        backgroundColor:[color],
+        backgroundColor: [color],
         // border:"4px solid black",
     };
     return (
         <div>
+            <div className="links">
+                <Link to='career'> Career</Link> <br />
+                <Link to='about'> About</Link>
+            </div>
+
+            <div>
+                <Outlet />
+            </div>
+
             <div
                 style={{
                     width: "100%",
@@ -85,7 +95,7 @@ export const BackGroundChange = () => {
                     justifyContent: "center",
                 }}>
                     <input
-                         style={{padding: "12px 42px", margin: "4px", borderRadius: "18px", border: "1px solid black" , fontSize: "16px" , color: "black"}}
+                        style={{ padding: "12px 42px", margin: "4px", borderRadius: "18px", border: "1px solid black", fontSize: "16px", color: "black" }}
                         onChange={(e) => {
                             setInput(e.target.value);
                         }}

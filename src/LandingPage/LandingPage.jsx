@@ -1,5 +1,5 @@
 import React from "react";
-import { Link  } from "react-router-dom";
+import { Link , Outlet } from "react-router-dom";
 const LandingPage = () => {
 
   return (
@@ -130,6 +130,7 @@ const LandingPage = () => {
           </p>
         </div>
       </div>
+
     </div>
   );
 };
