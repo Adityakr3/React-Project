@@ -1,14 +1,29 @@
 import React from "react";
 import { useState } from "react";
 import "./Game.css";
-
+import { Link } from "react-router-dom";
 const Game = () => {
+    const style = {
+        padding: "26px 26px",
+        width: "95px",
+        height: "95px",
+        border: "none",
+        borderRadius:"50%",
+        fontSize: "14px",
+        fontWeight: "bold",
+        color: "white",
+        backgroundColor: "#4caf4fac",
+    }
+
     const [vertical, setVertical] = useState(0);
     const [horizontal, setHorizontal] = useState(0);
 
     return (
         <div
             style={{
+                width: "100%",
+                height: "812px",
+                backgroundColor: "black",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -47,6 +62,7 @@ const Game = () => {
 
 
                 <button 
+                style={style}
                     className="btn"
                     onClick={() => {
                         setHorizontal(horizontal - 155); // Move left
@@ -65,6 +81,7 @@ const Game = () => {
                 >
                     {/* Down button */}
                     <button
+                     style={style}
                      className="btn"
                         onClick={() => {
                             setVertical(vertical - 155); // Move up
@@ -73,6 +90,7 @@ const Game = () => {
                         Up
                     </button>
                     <button
+                    style={style}
                      className="btn"
                         onClick={() => {
                             setVertical(vertical + 155); // Move down
@@ -88,6 +106,7 @@ const Game = () => {
 
                 {/* Right button */}
                 <button
+                style={style}
                  className="btn"
                     onClick={() => {
                         setHorizontal(horizontal + 155); // Move right
