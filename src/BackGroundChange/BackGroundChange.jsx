@@ -11,14 +11,14 @@ export const BackGroundChange = () => {
         fontSize: "16px",
         fontWeight: "bold",
         backgroundColor:[color],
-        border:"4px solid black",
+        // border:"4px solid black",
     };
     return (
         <div>
             <div
                 style={{
                     width: "100%",
-                    height: "800px",
+                    height: "812px",
                     backgroundColor: [color],
                     display: "flex",
                     flexDirection: "column",
